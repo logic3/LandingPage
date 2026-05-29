@@ -7,7 +7,7 @@
   <title>lauer.team</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
   <style>
     *,
     *::before,
@@ -64,15 +64,30 @@
 
     main {
       width: 100%;
-      max-width: 32rem;
+      max-width: min(42rem, 100%);
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: min(38vh, 14rem);
+      margin-bottom: clamp(0.5rem, 3vh, 1.5rem);
+      padding: 0 0.25rem;
     }
 
     .logo {
-      font-size: clamp(1.75rem, 5vw, 2.25rem);
-      font-weight: 600;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.75rem;
+      font-family: "Pinyon Script", "Snell Roundhand", "Apple Chancery", cursive;
+      font-size: clamp(2.75rem, min(22vw, 24vh), 11rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
     }
 
     .tagline {
@@ -134,7 +149,9 @@
 </head>
 <body>
   <main>
-    <h1 class="logo">lauer.team</h1>
+    <div class="logo-wrap">
+      <h1 class="logo">Lauer.team</h1>
+    </div>
     <p class="tagline">
       Willkommen — hier sammle ich Projekte und Experimente.
     </p>
